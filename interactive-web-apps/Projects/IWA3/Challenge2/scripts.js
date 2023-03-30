@@ -5,4 +5,10 @@ import './nwabisa.js'
 
 
 
-console.log('Roles', nwabisa.CEO, johanes.role, alex.role)
+console.log(" Roles: CEO, Intern, Head of Marketing");
+
+
+/*Johannas was spelled wrong
+*nwabisas role was wrong as 
+*console.log  didnt have quotation marks
+*/
