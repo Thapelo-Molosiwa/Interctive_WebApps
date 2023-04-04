@@ -8,9 +8,9 @@ import { role2 } from './johannes.js';
 import { role3 } from './nwabisa.js';
 
 
+// const roles = "Roles :" 
 
-
-console.log(role3 ,role2 , role1);
+console.log('Roles :',role3 ,role2 , role1);
 
 
 // console.log( 'Role : CEO, Head Of Market , Intern')
