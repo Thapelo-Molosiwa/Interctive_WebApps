@@ -20,7 +20,7 @@ const leo ={
 	age: 24,
 	address:{
 		number: leoNumber,
-		street: leoStreet,
+		street: leoStreet, 
 		postalCode: leoPostal,
 	}
 }
@@ -40,3 +40,4 @@ const sarah ={
 
 console.log(leo)
 console.log(sarah)
+
