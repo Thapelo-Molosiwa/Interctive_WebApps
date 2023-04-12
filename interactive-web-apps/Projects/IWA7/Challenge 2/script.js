@@ -1,4 +1,4 @@
-const nickname = "Timmy";
+const nickname = false;
 const firstname = "Timothy";
 
 if (nickname) {
