@@ -19,8 +19,8 @@ const divider = '----------------------------------';
 
 
 const owed = parseFloat(-1*(leoBalance)) + parseFloat(-1*(sarahBalance));
-const leo = `${leoName} ${leoSurname} (Owed: R ${parseFloat(-1*(leoBalance)).toFixed(2)})\n`;
-const sarah = `${(sarahName)} ${sarahSurname} (Owed: R ${parseFloat(-1*(sarahBalance)).toFixed(2)})\n\n`;
+const leo = `${leoName} ${leoSurname.trim()} (Owed: R ${parseFloat(-1*(leoBalance)).toFixed(2)})\n`;
+const sarah = `${(sarahName.trim())} ${sarahSurname} (Owed: R ${parseFloat(-1*(sarahBalance)).toFixed(2)})\n\n`;
 const total = `  Total amount owed: R ${owed.toFixed(2)}\n`;
 const result = `\n${leo}${sarah}${divider}\n${total}${divider}`;
 
