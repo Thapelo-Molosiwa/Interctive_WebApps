@@ -82,7 +82,7 @@ const correctDate = copied
 
 
 
-if(copied[6].date < holidays[6].date){   //new date is earlier
+if(copied[6].date < holidays[6].date){   
 
     console.log('new date is earlier : true')
 }else{
