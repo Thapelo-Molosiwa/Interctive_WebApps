@@ -110,6 +110,8 @@ if(holidays[6].name == copied[6].name){
 }
 
 
+
+
 if(holidays[6].date == copied[6].date){
 
     console.log('Date change: false')
