@@ -35,6 +35,8 @@ const holidays = {
         id: 6,
         name: 'Christmas Day',
         date: new Date(`25 December ${currentYear} 13:25`),
+
+
     },
     7: {
         id: 7,
@@ -46,6 +48,7 @@ const holidays = {
         name: 'Human Rights Day',
         date: new Date(`21 March ${currentYear}`)
     },
+ 
 }
 
 const christmas = 6
@@ -54,23 +57,87 @@ const futureId = 9
 // Do not change code above this comment
 
 
-console.log(holidays.9)
+
+
+if(holidays.futureId){       // the code is working
+
+    console.log(holidays.futureId.name)
+}else{
+    console.log("ID 9 not created yet")
+}
+
+const copied = {
+    6: {
+        id: 6,
+        name: 'X-mas',
+        date: new Date(`25 December ${currentYear} 00:00`),
+
+
+    },
+
+}
+
+
+const correctDate = copied
 
 
 
-console.log(holidays.futureId.name || 'ID {futureId} not created yet')
+if(copied[6].date < holidays[6].date){   //new date is earlier
 
-copied = holidays.christmas
-copied = { name: 'X-mas Day' }
-correctDate = copied.date
-correctDate.hours = 0
-correctDate.minutes = 0
-isEarlier = copied.date < holidays[6].date
-console.log('New date is earlier:', isEarlier)
-if (isEarlier) copied.date = correctDate
-console.log('ID change:', holidays[christmas].id != copied.id || copied.id)
-console.log('Name change:', holidays[christmas].name != copied.name || copied.name)
-console.log('Date change:', holidays[christmas].date != copied.date || copied.date)
+    console.log('new date is earlier : true')
+}else{
+    console.log('false')
+}
+
+
+
+if(holidays[6].id == copied[6].id){
+
+    console.log('ID change: false')
+}else{ 
+
+    console.log(copied[6].id)
+}
+
+
+
+if(holidays[6].name == copied[6].name){
+
+    console.log('Name change: false')
+}else{ 
+
+    console.log(`Name change: ${copied[6].name} `)
+}
+
+
+if(holidays[6].date == copied[6].date){
+
+    console.log('Date change: false')
+}else{ 
+
+    console.log(`Date change: ${copied[6].date} `)
+}
+
+
+
+
+
+
+
+
+
+
+// copied = holidays.christmas
+// copied = { name: 'X-mas Day' }
+// correctDate = copied.date
+// correctDate.hours = 0
+// correctDate.minutes = 0
+// isEarlier = copied.date < holidays[6].date
+// console.log('New date is earlier:', isEarlier)
+// if (isEarlier) copied.date = correctDate
+// console.log('ID change:', holidays[christmas].id != copied.id || copied.id)
+// console.log('Name change:', holidays[christmas].name != copied.name || copied.name)
+// console.log('Date change:', holidays[christmas].date != copied.date || copied.date)
 
 const firstHolidayTimestamp = Math.min(
     holidays[0].date.getTime,
@@ -84,25 +151,27 @@ const firstHolidayTimestamp = Math.min(
     holidays[8].date.getTime,
 )
 
-const lastHolidayTimestamp = Math.max(
-    holidays[0].date.getTime,
-    holidays[1].date.getTime,
-    holidays[2].date.getTime,
-    holidays[3].date.getTime,
-    holidays[4].date.getTime,
-    holidays[5].date.getTime,
-    holidays[6].date.getTime,
-    holidays[7].date.getTime,
-    holidays[8].date.getTime,
-)
 
-const firstDay = firstHolidayTimestamp.getDate
-const firstMonth = firstHolidayTimestamp.getMonth
-const lastDay = lastHolidayTimestamp.getDate
-const lastMonth = lastHolidayTimestamp.getMonth
 
-console.log('{firstDay}/{firstMonth}/{currentYear}')
-console.log('{lastDay}/{lastMonth}/{currentYear}')
+// const lastHolidayTimestamp = Math.max(
+//     holidays[0].date.getTime,
+//     holidays[1].date.getTime,
+//     holidays[2].date.getTime,
+//     holidays[3].date.getTime,
+//     holidays[4].date.getTime,
+//     holidays[5].date.getTime,
+//     holidays[6].date.getTime,
+//     holidays[7].date.getTime,
+//     holidays[8].date.getTime,
+// )
 
-const randomHoliday = holidays[Math.random]
-console.log(randomHoliday.date)
+// const firstDay = firstHolidayTimestamp.getDate
+// const firstMonth = firstHolidayTimestamp.getMonth
+// const lastDay = lastHolidayTimestamp.getDate
+// const lastMonth = lastHolidayTimestamp.getMonth
+
+// console.log('{firstDay}/{firstMonth}/{currentYear}')
+// console.log('{lastDay}/{lastMonth}/{currentYear}')
+
+// const randomHoliday = holidays[Math.random]
+// console.log(randomHoliday.date)
