@@ -117,8 +117,35 @@ if(holidays[6].date == copied[6].date){
     console.log('Date change: false')
 }else{ 
 
-    console.log(`Date change: ${copied[6].date} `)
+    console.log(`Date change: ${copied[6].date} `)  
 }
+
+
+
+
+
+
+// Find the first and last holiday in the year and a random holiday date
+let firstHoliday, lastHoliday, randomHoliday;
+for (const holiday of Object.values(holidays)) {
+  const holidayDate = new Date(holiday.date);
+  if (!firstHoliday || holidayDate < firstHoliday) {
+    firstHoliday = holidayDate;
+  }
+  if (!lastHoliday || holidayDate > lastHoliday) {
+    lastHoliday = holidayDate;
+  }
+}
+randomHoliday = new Date(firstHoliday.getTime() + Math.random() * (lastHoliday.getTime() - firstHoliday.getTime()));
+
+
+// Log the dates in the required format
+
+
+const CurrentYear = new Date().getFullYear();
+console.log(`First holiday: ${firstHoliday.toLocaleDateString("en-ZA", { day: "2-digit", month: "2-digit", year: "numeric" })}/${CurrentYear}`);
+console.log(`Last holiday: ${lastHoliday.toLocaleDateString("en-ZA", { day: "2-digit", month: "2-digit", year: "numeric" })}/${CurrentYear}`);
+console.log(`Random holiday:${randomHoliday.toLocaleDateString("en-ZA",{day: "2-digit",month: "2-digit", year: "numeric"})}/${CurrentYear}`)
 
 
 
@@ -141,17 +168,17 @@ if(holidays[6].date == copied[6].date){
 // console.log('Name change:', holidays[christmas].name != copied.name || copied.name)
 // console.log('Date change:', holidays[christmas].date != copied.date || copied.date)
 
-const firstHolidayTimestamp = Math.min(
-    holidays[0].date.getTime,
-    holidays[1].date.getTime,
-    holidays[2].date.getTime,
-    holidays[3].date.getTime,
-    holidays[4].date.getTime,
-    holidays[5].date.getTime,
-    holidays[6].date.getTime,
-    holidays[7].date.getTime,
-    holidays[8].date.getTime,
-)
+// const firstHolidayTimestamp = Math.min(
+//     holidays[0].date.getTime,
+//     holidays[1].date.getTime,
+//     holidays[2].date.getTime,
+//     holidays[3].date.getTime,
+//     holidays[4].date.getTime,
+//     holidays[5].date.getTime,
+//     holidays[6].date.getTime,
+//     holidays[7].date.getTime,
+//     holidays[8].date.getTime,
+// )
 
 
 
