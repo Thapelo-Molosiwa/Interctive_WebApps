@@ -1,14 +1,6 @@
-function add (a ,b){
-    
-    (a, b) => { a + b }
+function add = a, b => { a + b }
 
-}
-
-function multiply (){
-    
-    (a, b) => { a * b }  //changed the minus sign to multiply
-
-}
+function multiply = a, b => { a - b }
 
 function internal() {
 	const added = this.add(this.a, this.b)
