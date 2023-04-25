@@ -105,5 +105,5 @@ const MONTHS = [
   }
   
   [NM372], [SV782] = data
-  document.querySelector(NM372).appendChild(createHtml(NM372));
+  document.querySelector(NM372).appendChild(createHtml(lknjlkfn
   document.querySelector(SV782).appendChild(createHtml(SV782));
