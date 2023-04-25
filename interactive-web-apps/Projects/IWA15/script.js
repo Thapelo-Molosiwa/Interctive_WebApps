@@ -8,7 +8,7 @@ const data = {
 
 // Only edit below
 
-const first  = data.lists[0][1]
+const first  = data.lists[0][1]  // looking for index with numbers
 const second = data.lists[1][1]
 const  third = data.lists[2][1]
 
@@ -22,9 +22,7 @@ const extractBiggest = () => {
         return first.pop()
 
 
-    }
-
-    if(second[second.length -1] >= third[third.length - 1]){
+    }else if(second[second.length -1] >= third[third.length - 1]){
         return second.pop()
 
     }else{
