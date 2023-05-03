@@ -261,24 +261,26 @@ const getDaysInMonth = (date) => new Date(date.getFullYear(), date.getMonth() + 
 // Only edit below
 
 
-const createArray = (length) => {
+const createArray = (length) => {  // I used this parameter to determine the size of the array that the function will create.
     const result = [];
-    for (let i = 0; i < length; i++) {
-        result.push(i);
+    for (let i = 0; i < length; i++) { //  I used a for loop to repeat length number of times. 
+        result.push(i); // current value of i is pushed into the result array using the push() method. Since i starts at 0 and increments by 1 with each iteration, 
     }
     return result;
 };
 
 
-const createData = function(){
-    const current = new Date();
-    current.setDate(1);
-    const startDay = current.getDay();
-    const daysInMonth = getDaysInMonth(current);
+const createData = function(){ // this function is to create an array that presents a calender month
+    const current = new Date();   // Create a new date object representing the current date
+    current.setDate(1);   // Set the day of the month to 1
+    const startDay = current.getDay();  // Get the day of the week for the 1st day of the month
+    const daysInMonth = getDaysInMonth(current);// Get the number of days in the current month
     const weeks = createArray(5);
     const days = createArray(7);
-     let result = [] //value = null
-    for (let weekIndex = 0; weekIndex < weeks.length; weekIndex++) {
+     let result = [] //value = null ... Initialize an empty array to store the final result
+
+
+    for (let weekIndex = 0; weekIndex < weeks.length; weekIndex++) { // Iterate over each week
         let value = {
             week: weekIndex + 1,
             days: []
